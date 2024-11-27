@@ -9,7 +9,7 @@ pipeline {
         stage('Checkout SCM'){
             steps{
                     git branch: 'main',
-                    url: "https://github.com/DivyaJyothiVundavalli/Ecom_Project_space.git"
+                    url: "https://github.com/DivyaJyothiVundavalli/Ecom_EKS_CD.git"
             }
         }
          stage('Initializing Terraform'){
