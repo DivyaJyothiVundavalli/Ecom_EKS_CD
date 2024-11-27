@@ -8,9 +8,8 @@ pipeline {
     stages{
         stage('Checkout SCM'){
             steps{
-                script{
-                    //Generate  using pipeline syntax
-                }
+                    git branch: 'main',
+                    url: "https://github.com/DivyaJyothiVundavalli/Ecom_Project_space.git"
             }
         }
          stage('Initializing Terraform'){
