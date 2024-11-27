@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ecom-app-deployment
+  labels:
+    app: ecom-app
+spec:
+  replicas: 2  
+  selector:
+    matchLabels:
+      app: ecom-app
+  template:
+    metadata:
+      labels:
+        app: ecom-app
+    spec:
+      containers:
+      - name: ecom-app
+        image: divyavundavalli/ecom_project:latest
+        ports:
+        - containerPort: 5000  # Flask app runs on port 5000
