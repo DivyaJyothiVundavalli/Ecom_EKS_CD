@@ -12,6 +12,14 @@ pipeline {
                     url: "https://github.com/DivyaJyothiVundavalli/Ecom_EKS_CD.git"
             }
         }
+
+        stage(test .tf files){
+            steps{
+              //   echo "ls command:"
+                sh 'ls -al'
+            }
+        }
+        
          stage('Initializing Terraform'){
             steps{
                 script{
