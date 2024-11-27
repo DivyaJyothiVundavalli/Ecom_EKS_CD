@@ -13,7 +13,7 @@ pipeline {
             }
         }
 
-        stage(test .tf files){
+        stage('test .tf files'){
             steps{
               //   echo "ls command:"
                 sh 'ls -al'
